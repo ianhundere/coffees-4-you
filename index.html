@@ -1,23 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Synths for you</title>
+    <title>coffees4you</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    <h1>Synths for you</h1>
-    
-    <form action="">
-        <input type="text">
+    <h1>coffees4you</h1>
+
+    <form action="https://dc-coffeerun.herokuapp.com/api/coffeeOrders"
+    method="POST"
+    data-form
+    >
+        <label>
+            Coffee:
+            <input type="text" name="coffee" placeholder="type of coffee" value="gewd">
+        </label>
+        <br><br>
+        <label>
+            Email:
+            <input type="email" name="emailAddress" placeholder="mail@domain.com" value="z@z.com">
+        </label>
+        <br><br>
+        <label>
+            Size:
+            <input type="text" name="size" placeholder="poly/mono" value="cough">
+        </label>
+        <br><br>
+        <label>
+            Flavor:
+            <input type="text" name="flavor" placeholder="digital, analog,combo" value="zing">
+        </label>
+        <br><br>
+        <label>
+            Strength:
+            <input type="number" name="strength" min="1" max="1000" value="1">
+        </label>
+        <br><br>
         <input type="submit">
-
-
-
     </form>
     <script src="scripts/index.js"></script>
 </body>
+
 </html>
